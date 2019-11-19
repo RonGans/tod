@@ -7,9 +7,9 @@ module Tod
   class Railtie < Rails::Railtie
     initializer "tod.register_active_model_type" do
       if Rails.version[0] > "4"
-        ActiveModel::Type.register(:time_only, Tod::TimeOfDayType)
+        #ActiveModel::Type.register(:time_only, Tod::TimeOfDayType)
       else
-        ActiveRecord::Type.register(:time_only, Tod::TimeOfDayType)
+        #ActiveRecord::Type.register(:time_only, Tod::TimeOfDayType)
       end
     end
   end
